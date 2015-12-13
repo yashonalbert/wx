@@ -372,7 +372,7 @@ module.exports = ({token, app_id, app_secret, encoding_aes_key, redis_options, p
     res.sendFile "#{__dirname}/public/js/bootstrap.min.js"
 
   router.get 'library.min.js', (req, res) ->
-    res.sendFile "#{__dirname}/public/jslibrary.min.js"
+    res.sendFile "#{__dirname}/public/js/library.min.js"
 
   router.get 'bootstrap.min.css', (req, res) ->
     res.sendFile "#{__dirname}/public/css/bootstrap.min.css"
