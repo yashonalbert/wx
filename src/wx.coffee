@@ -368,16 +368,16 @@ module.exports = ({token, app_id, app_secret, encoding_aes_key, redis_options, p
           res.send render_admin json_2_markdown json
 
   # ### public
-  router.get 'bootstrap.min.js', (req, res) ->
+  router.get '/bootstrap.min.js', (req, res) ->
     res.sendFile "#{__dirname}/public/js/bootstrap.min.js"
 
-  router.get 'library.min.js', (req, res) ->
+  router.get '/library.min.js', (req, res) ->
     res.sendFile "#{__dirname}/public/js/library.min.js"
 
-  router.get 'bootstrap.min.css', (req, res) ->
+  router.get '/bootstrap.min.css', (req, res) ->
     res.sendFile "#{__dirname}/public/css/bootstrap.min.css"
 
-  router.get 'prism.css', (req, res) ->
+  router.get '/prism.css', (req, res) ->
     res.sendFile "#{__dirname}/public/css/prism.css"
 
   # ### 接口验证中间件
