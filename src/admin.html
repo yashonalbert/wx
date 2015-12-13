@@ -2,8 +2,8 @@
 <head>
   <title>admin</title>
 <link href="https://res.wx.qq.com/mpres/htmledition/images/favicon1ddd38.ico" rel="Shortcut Icon">
-<link rel="stylesheet" href="http://cdn.wedocare.com/vendor/prism/0.0.1/prism.css">
-<link rel="stylesheet" href="http://cdn.wedocare.com/vendor/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="prism.css">
+<link rel="stylesheet" href="bootstrap.min.css">
   <style>
     html,body{
       width:100%;
@@ -14,8 +14,8 @@
       background: #000;
       position: relative;
     }
-      
-    #editor { 
+
+    #editor {
         margin: 0;
         position: absolute;
         top: 0;
@@ -31,7 +31,7 @@
       right:108px;
       z-index: 1;
       background:#fff;
-      border:none; 
+      border:none;
       font-size: 20px;
     }
     #div_success,
@@ -51,7 +51,7 @@
       left: 0;
       visibility: hidden;
     }
-      
+
     .phone{
       position: absolute;
       top: -200px;
@@ -61,21 +61,21 @@
       height:800px;
       background:url(http://cdn.wedocare.com/img/message/message_iphone.png) no-repeat;
     }
-      
-      
+
+
 .phone>ul{
   margin: 250px 0 100px 68px;
   padding: 0;
 }
-    
+
 .phone>ul li{
   width: 100px;
   height:25px;
   margin-bottom: 10px;
   background: #fff;
   list-style: none;
-} 
-    
+}
+
 .phone>ul li:nth-child(1){
   width: 110px;
 }
@@ -89,8 +89,8 @@
   width: 200px;
 }
 
-      
-      
+
+
 
 
 /* 按钮组 */
@@ -127,8 +127,8 @@
   border-right: none;
 }
 
-      
-      
+
+
 
 /* 1、2、3、*/
 #div_result > div[length="1"] > a{
@@ -137,7 +137,7 @@
 #div_result > div[length="2"] > a{
   width: 155px;
 }
-      
+
 
 
 /* 出现二级菜单：一级菜单的箭头标识 */
@@ -172,7 +172,7 @@
   display: none;
 }
 #div_result .dropdown-menu:before{
-  content: ''; 
+  content: '';
   position: absolute;
   bottom: -2px;
   left: 40px;
@@ -201,11 +201,11 @@
 #div_result > div > ul li:nth-child(1) + li a{
   border-top: none;
 }
-      
+
 #textarea_markdown{
   display:none;
   position:absolute;
-}    
+}
 #div_json{
   position: absolute;
   top: 0px;
@@ -221,7 +221,7 @@
 #div_json pre:empty{
   display:none;
 }
-      
+
 /* Retina device*/
 @media (min--moz-device-pixel-ratio: 2),
 (-webkit-min-device-pixel-ratio: 2),
@@ -232,7 +232,7 @@
     background:url(http://cdn.wedocare.com/img/message/message_iphone@2x.png) no-repeat;
     background-size: auto 800px;
   }
-    
+
   #div_result a.option_icon:before{
     background: url(http://cdn.wedocare.com/img/edit_button/edit_button_icon@2x.png) no-repeat 0 0;
     background-size: 12px;
@@ -244,8 +244,8 @@
 
 <form method="post" action="">
 
-<div id="editor"></div>    
-    
+<div id="editor"></div>
+
 <div class="phone">
   <ul>
       <li></li>
@@ -262,7 +262,7 @@
 <input type="password" class="admin_app_secret" name="app_secret" value="APPSECRET" />
 <input type="submit" name='action' value='更新菜单'></input>
 </form>
-    
+
 
 <div id="div_success"></div>
 <div id="div_error"></div>
@@ -276,8 +276,8 @@
 <script src="ace/mode-markdown.js" type="text/javascript" ></script>
 <script src="ace/theme-terminal.js" type="text/javascript"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
-<script src="http://cdn.wedocare.com/vendor/Library/library.min.js"></script>
-<script src="http://cdn.wedocare.com/vendor/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="library.min.js"></script>
+<script src="bootstrap.min.js"></script>
 <script>
   var markdown_2_json     = function markdown_2_json() {};
   var editor              = ace.edit("editor");
