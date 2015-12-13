@@ -11,7 +11,12 @@ build:
 	@coffee -c$(opt) -o lib src
 	@cp src/*.html lib
 	@mkdir lib/ace
+	@mkdir lib/public
+	@mkdir lib/public/css
+	@mkdir lib/public/js
 	@cp src/ace/* lib/ace
+	@cp src/public/css/* lib/public/css
+	@cp src/public/js/* lib/public/js
 
 watch:
 	@coffee -wc$(opt) -o lib src
