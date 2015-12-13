@@ -367,6 +367,19 @@ module.exports = ({token, app_id, app_secret, encoding_aes_key, redis_options, p
             return res.status(500).end()
           res.send render_admin json_2_markdown json
 
+  # ### public
+  router.get 'bootstrap.min.js', (req, res) ->
+    res.sendFile "#{__dirname}/bootstrap.min.js"
+
+  router.get 'library.min.js', (req, res) ->
+    res.sendFile "#{__dirname}/library.min.js"
+
+  router.get 'bootstrap.min.css', (req, res) ->
+    res.sendFile "#{__dirname}/bootstrap.min.css"
+
+  router.get 'prism.css', (req, res) ->
+    res.sendFile "#{__dirname}/prism.css"
+
   # ### 接口验证中间件
   #
   # 该段之后，全部请求均来自微信服务器，验证该消息真伪性（该机制无法抵御回放攻击）。
